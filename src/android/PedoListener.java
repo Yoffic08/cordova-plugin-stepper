@@ -472,7 +472,7 @@ public class PedoListener extends CordovaPlugin implements SensorEventListener {
     } else {
       sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_GAME, 0);
     }
-
+    sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_GAME, 0);
     total_start = db.getTotalWithoutToday();
     total_days = db.getDays();
 
