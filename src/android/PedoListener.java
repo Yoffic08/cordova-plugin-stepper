@@ -465,7 +465,6 @@ public class PedoListener extends CordovaPlugin implements SensorEventListener {
     // register a sensor listener to live update the UI if a step is taken
     sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
     sensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-    sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_GAME, 0);
     if (sensor == null) {
       prefs.edit().putBoolean("enabled", false).commit();
       this.fail(PedoListener.ERROR_NO_SENSOR_FOUND, "Not Step counter sensor found");
